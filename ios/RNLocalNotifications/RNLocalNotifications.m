@@ -34,7 +34,7 @@ RCT_EXPORT_METHOD(setAndroidIcons:(NSString *)largeIconName largeIconType:(NSStr
         [self deleteAlarm:id];
     }
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *fireDate = [dateFormat dateFromString:datetime];
     if ([[NSDate date]compare: fireDate] == NSOrderedAscending) { //only schedule items in the future!
         UILocalNotification *notification = [[UILocalNotification alloc] init];
